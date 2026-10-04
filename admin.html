@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FreshCart Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛒 FreshCart Admin
+        </div>
+
+        <a href="index.html">
+            ← Back to Store
+        </a>
+
+    </nav>
+
+
+
+    <!-- ADMIN CONTAINER -->
+
+    <main class="admin-container">
+
+
+        <h1>Admin Dashboard</h1>
+
+        <p class="admin-subtitle">
+            Manage grocery products and customer orders
+        </p>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="admin-stats">
+
+            <div class="admin-stat-card">
+
+                <h3>Total Products</h3>
+
+                <p id="totalProducts">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <h3>Total Orders</h3>
+
+                <p id="totalOrders">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <h3>Total Sales</h3>
+
+                <p id="totalSales">
+                    ₹0
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ADD PRODUCT -->
+
+        <section class="admin-section">
+
+            <h2>➕ Add New Product</h2>
+
+
+            <form id="productForm"
+                  class="admin-form">
+
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product Name"
+                    required
+                >
+
+
+                <select id="productCategory"
+                        required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="Fruits">
+                        Fruits
+                    </option>
+
+                    <option value="Dairy">
+                        Dairy
+                    </option>
+
+                    <option value="Snacks">
+                        Snacks
+                    </option>
+
+                    <option value="Beverages">
+                        Beverages
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price"
+                    min="1"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="productUnit"
+                    placeholder="Unit (e.g. 1 kg)"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="productImage"
+                    placeholder="Emoji (e.g. 🍎)"
+                >
+
+
+                <input
+                    type="number"
+                    id="productStock"
+                    placeholder="Stock"
+                    min="0"
+                    value="100"
+                    required
+                >
+
+
+                <button type="submit"
+                        class="admin-button">
+
+                    Add Product
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- PRODUCTS -->
+
+        <section class="admin-section">
+
+            <h2>📦 Products</h2>
+
+            <div id="adminProducts">
+
+                Loading products...
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ORDERS -->
+
+        <section class="admin-section">
+
+            <h2>🧾 Customer Orders</h2>
+
+            <div id="adminOrders">
+
+                Loading orders...
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 FreshCart | Admin Dashboard
+        </p>
+
+    </footer>
+
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
