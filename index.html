@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshCart - Online Grocery Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛒 FreshCart
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                🥕 Fresh • Healthy • Affordable
+            </p>
+
+            <h1>
+                Fresh Groceries<br>
+                Delivered To Your Door
+            </h1>
+
+            <p>
+                Shop fresh vegetables, fruits, dairy products,
+                snacks and daily essentials from FreshCart.
+            </p>
+
+            <a href="#products" class="shop-button">
+                Shop Now →
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            🛒🥦🍎🥛
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories" id="categories">
+
+        <div class="section-heading">
+
+            <p>SHOP BY CATEGORY</p>
+
+            <h2>
+                Browse Our Categories
+            </h2>
+
+        </div>
+
+        <div class="category-container">
+
+            <button onclick="filterCategory('All')">
+                🛍️
+                <span>All</span>
+            </button>
+
+            <button onclick="filterCategory('Vegetables')">
+                🥦
+                <span>Vegetables</span>
+            </button>
+
+            <button onclick="filterCategory('Fruits')">
+                🍎
+                <span>Fruits</span>
+            </button>
+
+            <button onclick="filterCategory('Dairy')">
+                🥛
+                <span>Dairy</span>
+            </button>
+
+            <button onclick="filterCategory('Snacks')">
+                🍪
+                <span>Snacks</span>
+            </button>
+
+            <button onclick="filterCategory('Beverages')">
+                🥤
+                <span>Beverages</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+
+            <p>OUR PRODUCTS</p>
+
+            <h2>
+                Fresh Products
+            </h2>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search groceries..."
+                onkeyup="searchProducts()"
+            >
+
+            <select id="sortSelect" onchange="sortProducts()">
+
+                <option value="default">
+                    Sort Products
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="name">
+                    Name: A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PRODUCT CONTAINER -->
+
+        <div
+            class="product-container"
+            id="productContainer"
+        >
+
+            <!-- Products will be loaded using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Quick and reliable delivery to your doorstep.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🌱
+            </div>
+
+            <h3>
+                Fresh Products
+            </h3>
+
+            <p>
+                Quality and fresh groceries every day.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>
+                Secure Shopping
+            </h3>
+
+            <p>
+                Safe and simple online grocery shopping.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Best Prices
+            </h3>
+
+            <p>
+                Affordable prices for your daily needs.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div>
+
+            <p class="small-title">
+                ABOUT FRESHCART
+            </p>
+
+            <h2>
+                Your Daily Grocery Partner
+            </h2>
+
+            <p>
+                FreshCart is an online grocery management system
+                designed to make grocery shopping simple and convenient.
+                Customers can browse products, search for items,
+                add products to their cart and place orders online.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <h3>
+                🛒 FreshCart
+            </h3>
+
+            <p>
+                Fresh groceries at your fingertips.
+            </p>
+
+            <strong>
+                Quality • Convenience • Value
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🛒 FreshCart
+        </div>
+
+        <p>
+            © 2026 FreshCart Online Grocery Management System
+        </p>
+
+        <p>
+            Built using HTML, CSS, JavaScript & Node.js
+        </p>
+
+    </footer>
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <div
+        class="cart-modal"
+        id="cartModal"
+    >
+
+        <div class="cart-box">
+
+            <div class="cart-header">
+
+                <h2>
+                    🛒 Your Cart
+                </h2>
+
+                <button onclick="closeCart()">
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div
+                id="cartItems"
+                class="cart-items"
+            >
+
+                <!-- Cart items appear here -->
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="checkout()"
+            >
+                Place Order
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
