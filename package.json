@@ -1,0 +1,19 @@
+{
+  "name": "online-grocery-management",
+  "version": "1.0.0",
+  "description": "Online Grocery Management System using Node.js and Netlify",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.37.0"
+  }
+}
